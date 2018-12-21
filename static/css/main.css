@@ -1,0 +1,68 @@
+body{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+form{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.Header{
+	background-color: #aaf442;
+	height: 50px;
+}
+ .logo{
+ 	margin: 0 0 0 0;
+ 	float: left;
+ }
+ .menu{
+ 	padding-top: 15px;
+ 	padding-left: 110px;
+ }
+
+ form.menubar{
+ 	float: left;
+ 	padding-left: 20px;
+ }
+
+ .content{
+ 	width: 80%;
+ 	height: 90%;
+ 	margin-right: auto;
+ 	margin-left: auto;
+ 	margin-top: 40px;
+ 	padding: 15px;
+ 	background-color: rgba(212,160,255,0.2);
+ }
+ html{
+ 	background-color: rgb(220,224,215);
+ }
+ select{
+ 	background-color: #ffb2b2;
+ }
+ .button{
+ 	background-color: #51fffc;
+ }
+ .textbox{
+ 	font-family: "Lucida Console", Monaco, monospace;
+ }
+
+ h2{
+ }
+
+ h3{
+ 	color: #999;
+ 	opacity: 0.7;
+ 	text-align: center;
+ }
+
+.content_img {
+    width: 80%;
+    overflow: hidden;
+}
+
+.content_img img {
+    margin-right: 5px;
+    float: left;
+}
+ footer{
+ 	color : #ff8b32;
+ 	opacity: 0.4;
+ }

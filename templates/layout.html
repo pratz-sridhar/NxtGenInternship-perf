@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta http-equiv="Cache-control" content="no-cache">
+<html>
+	<head>
+		<title>MyApp</title>    
+    	<strong><link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}"></strong>
+	</head>
+	<body>
+		<div class="Header">
+			<h1 class="logo" style="color: #4542f4 "><a href="{{ url_for('home') }}">MyApp</a></h1>
+			<div class="menu">
+				<form class="menubar" action="/search" name="form1">
+					<input class="textbox" type="text" name="servername">
+					<input class = "button" type="submit" value="Search.">
+					<input type="hidden" name="date_in" value="2018-12-20">
+				</form>
+				<form class="menubar" action="/tabular" name="form2">
+					<select name="zone">
+						<option value="BLR">Bangalore</option>
+						<option value="AMD">Ahmedabad</option>
+						<option value="MUM">Mumbai</option>
+						<option value="FDB">Faridabad</option>
+					</select>
+					
+					<select name="dataid">
+						<option value=0>Server Uptime</option>
+						<option value=1>CPU Utilization</option>
+						<option value=2>Memory Utilization</option>
+					</select>
+					
+					<input class="button" type="submit" Value="View tabular form">
+					&nbsp &nbsp &nbsp &nbsp
+					<input type="date" name="date_in" value="2018-12-20" onblur = "document.form1.date_in.value = this.value;">
+				</form>
+			</div>
+		</div>
+
+		<div class="content">
+			{% block content %}
+      		{% endblock %}
+		</div>
+	</body>
+	<footer>
+	*Note: This app doesnt use cache or rather disables it for this app. If any cache for this app is present from before, please clear.
+	</footer>
+</html>

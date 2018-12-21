@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content_img">
+<img src= "/images?path=s1.png" onload="my_alert()">
+<h2>
+Server Uptime = {{uptime}}<br/>
+CPU Utilization = {{cpu_util}}<br/>
+Memory Utilization = {{mem_util}}<br/>
+Displaying for date : {{d}}
+</h2>
+
+<script>
+	function my_alert() {
+		var b = Number('{{cpu_util}}');
+		var c = Number('{{mem_util}}');
+		if (b>90) {
+			alert("CPU Utilization is too high for this server!!");
+		}
+		else if(c>90) {
+			alert("Memory Utilization is too high for this server!!");
+		}
+		else if(b>90 && c>90) {
+			alert("CPU and Memory Utilization is too high for this server!!");
+		}
+	}
+</script>
+</div>{% endblock %}
